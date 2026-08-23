@@ -9,12 +9,12 @@ public class Empleado {
     private final List<String> tareas;
 
     public Empleado(String nombre) {
-        this.nombre = nombre;
+         this.nombre = nombre;
         this.tareas = new ArrayList<>();
     }
 
     public List<String> getTareas() {
-        return tareas;
+        return new ArrayList<>(tareas);
     }
 
     public void agregarTarea(String tarea) {

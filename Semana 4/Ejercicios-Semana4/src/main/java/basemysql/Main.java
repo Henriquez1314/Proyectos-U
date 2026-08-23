@@ -39,5 +39,17 @@ public class Main {
 
         new Registro();
 
+        LibroBiblioteca l1 =
+                new LibroBiblioteca("Clean Code", "R. Martin", 3);
+
+        LibroBiblioteca l2 =
+                LibroBiblioteca.unico("Effective Java", "J. Bloch");
+
+        l1.prestar();
+        l2.prestar();
+        l2.prestar();
+
+        new LibroBiblioteca("", "Autor X", 2);
+
     }
 }
