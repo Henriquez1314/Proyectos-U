@@ -1,9 +1,6 @@
 package basemysql;
 
-import com.uped.proyecto.modelo.ConfiguracionReporte;
-import com.uped.proyecto.modelo.Pedido;
-import com.uped.proyecto.modelo.Suscripcion;
-import com.uped.proyecto.modelo.Vehiculo;
+import com.uped.proyecto.modelo.*;
 
 public class Main {
     static void main() {
@@ -39,5 +36,8 @@ public class Main {
         // Suscripcion - metodo de fabrica
         Suscripcion s2 = Suscripcion.premium("carlos");
         System.out.println(s2);
+
+        new Registro();
+
     }
 }
