@@ -1,0 +1,43 @@
+package basemysql;
+
+import com.uped.proyecto.modelo.ConfiguracionReporte;
+import com.uped.proyecto.modelo.Pedido;
+import com.uped.proyecto.modelo.Suscripcion;
+import com.uped.proyecto.modelo.Vehiculo;
+
+public class Main {
+    static void main() {
+
+        // Vehiculo
+        Vehiculo v1 = Vehiculo.nuevo("P123-789", "Kia");
+
+        System.out.println(v1);
+
+        v1.recorrer(150);
+
+        System.out.println(v1);
+
+        v1.recorrer(-20);
+
+        // ConfiguracionReporte - Builder
+        ConfiguracionReporte reporte = new ConfiguracionReporte.Builder()
+                .titulo("Reporte de ventas")
+                .formato("PDF")
+                .incluirGraficos(true)
+                .incluirDetalles(true)
+                .build();
+
+        System.out.println(reporte);
+
+        // Pedido - bloque de inicializacion
+        Pedido pedido = new Pedido(101);
+
+        // Suscripcion - cascada de constructores
+        Suscripcion s1 = new Suscripcion("ana");
+        System.out.println(s1);
+
+        // Suscripcion - metodo de fabrica
+        Suscripcion s2 = Suscripcion.premium("carlos");
+        System.out.println(s2);
+    }
+}
